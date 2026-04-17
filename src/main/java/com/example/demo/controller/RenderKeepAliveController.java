@@ -31,7 +31,6 @@ public class RenderKeepAliveController {
     @GetMapping("/health-check")
     public String healthCheck() {
         pingCount.set(0);
-        log.info("Health check received. Counter reset.");
         return "OK - Counter Reset (Current: " + pingCount.get() + ")";
     }
 
